@@ -19,14 +19,14 @@ interface AttackArc {
   targetName?: string;
 }
 
-interface GlobePoint {
-  lat: number;
-  lng: number;
-  size: number;
-  color: string;
-  label: string;
-  type: 'source' | 'target' | 'hub';
-}
+// interface GlobePoint {
+//   lat: number;
+//   lng: number;
+//   size: number;
+//   color: string;
+//   label: string;
+//   type: 'source' | 'target' | 'hub';
+// }
 
 interface RingAnimation {
   id: string;
