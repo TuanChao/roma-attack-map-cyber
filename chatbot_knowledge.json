@@ -1,0 +1,16 @@
+{
+  "qa_pairs": [
+    {
+      "question": "Xin chào",
+      "answer": "Chào bạn! Tôi có thể giúp gì cho bạn?"
+    },
+    {
+      "question": "Bạn tên gì?",
+      "answer": "Tôi là chatbot đơn giản, bạn có thể dạy tôi thêm nhiều điều!"
+    },
+    {
+      "question": "Bye",
+      "answer": "Tạm biệt! Hẹn gặp lại bạn!"
+    }
+  ]
+}

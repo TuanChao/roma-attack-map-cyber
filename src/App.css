@@ -1,0 +1,118 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  color: white;
+  max-width: 600px;
+  text-align: left;
+  font-family: 'Saira', sans-serif;
+}
+
+.title-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #00cccc 0%, #00a8cc 30%, #0088cc 60%, #cc3a45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-out, textGlow 3s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.title-overlay p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+  padding-left: 2px;
+  border-left: 3px solid rgba(0, 255, 255, 0.4);
+  padding-left: 16px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.35)) drop-shadow(0 0 18px rgba(0, 212, 255, 0.2));
+  }
+}
+
+@media (max-width: 768px) {
+  .title-overlay {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+    text-align: center;
+    top: 20px;
+  }
+
+  .title-overlay h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .title-overlay p {
+    font-size: 0.95rem;
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-overlay h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .title-overlay p {
+    font-size: 0.85rem;
+  }
+}
