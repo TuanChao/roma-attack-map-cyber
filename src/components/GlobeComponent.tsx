@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import Globe from 'globe.gl';
 import RomaAIPanel from './RomaAIPanel';
 import AttackDashboard from './AttackDashboard';
+import DiscordSettings from './DiscordSettings';
+import { discordNotificationService } from '../services/discordNotification';
 import './GlobeComponent.css';
 
 interface AttackArc {
@@ -184,6 +186,16 @@ export default function GlobeComponent() {
       return updated.slice(-100);
     });
 
+    // Gửi thông báo Discord
+    discordNotificationService.sendNotification({
+      type: newAttack.type,
+      source: source,
+      target: target,
+      severity: newAttack.severity,
+      timestamp: newAttack.timestamp,
+      status: newAttack.status,
+    });
+
     // Create ring animation at target location (lighter version)
     const newRing: RingAnimation = {
       id: `ring-${Date.now()}-${Math.random()}`,
@@ -264,6 +276,16 @@ export default function GlobeComponent() {
     };
 
     setAttacks(prev => [...prev, newAttack]);
+
+    // Gửi thông báo Discord cho attack từ command
+    discordNotificationService.sendNotification({
+      type: newAttack.type,
+      source: command.source,
+      target: command.target,
+      severity: newAttack.severity,
+      timestamp: newAttack.timestamp,
+      status: newAttack.status,
+    });
 
     // Create ring animation at target (optimized)
     const commandRing: RingAnimation = {
@@ -694,6 +716,7 @@ export default function GlobeComponent() {
         attackStats={attackStats}
       />
       <AttackDashboard attacks={dashboardAttacks} />
+      <DiscordSettings />
     </div>
   );
 }
