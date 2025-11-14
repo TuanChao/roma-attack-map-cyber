@@ -1,25 +1,51 @@
 .discord-settings-toggle {
   position: fixed;
-  bottom: 30px;
+  top: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
-  border: 3px solid rgba(88, 101, 242, 0.3);
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #5865f2 0%, #7289da 50%, #677bc4 100%);
+  border: none;
   color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(88, 101, 242, 0.4), 0 0 40px rgba(88, 101, 242, 0.2);
-  transition: all 0.3s ease;
+  box-shadow:
+    0 8px 30px rgba(88, 101, 242, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
   z-index: 9999;
+  animation: discordPulse 3s ease-in-out infinite;
+}
+
+@keyframes discordPulse {
+  0%, 100% {
+    box-shadow:
+      0 8px 30px rgba(88, 101, 242, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 8px 40px rgba(88, 101, 242, 0.7),
+      0 0 20px rgba(88, 101, 242, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
 }
 
 .discord-settings-toggle:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(88, 101, 242, 0.6), 0 0 60px rgba(88, 101, 242, 0.3);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow:
+    0 12px 40px rgba(88, 101, 242, 0.7),
+    0 0 30px rgba(114, 137, 218, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #7289da 0%, #677bc4 50%, #5865f2 100%);
 }
 
 .discord-settings-toggle svg {
@@ -309,4 +335,62 @@
 
 .discord-settings-content::-webkit-scrollbar-thumb:hover {
   background: rgba(88, 101, 242, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .discord-settings-toggle {
+    top: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .discord-settings-toggle svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .discord-settings-panel {
+    width: 95%;
+    max-width: none;
+  }
+
+  .discord-settings-header {
+    padding: 16px 20px;
+  }
+
+  .discord-settings-header h2 {
+    font-size: 18px;
+  }
+
+  .discord-settings-content {
+    padding: 20px;
+  }
+
+  .discord-settings-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .discord-settings-toggle {
+    width: 52px;
+    height: 52px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .discord-settings-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .discord-settings-header h2 {
+    font-size: 16px;
+  }
+
+  .discord-settings-content {
+    padding: 16px;
+  }
 }

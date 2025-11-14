@@ -392,8 +392,12 @@ export default function GlobeComponent() {
 
   useEffect(() => {
     const initGlobe = () => {
-      if (!mountRef.current) return;
+      if (!mountRef.current) {
+        console.log('Mount ref not ready');
+        return;
+      }
 
+      console.log('Initializing globe...');
       try {
         const globe = (Globe as any)()
           .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
@@ -403,11 +407,13 @@ export default function GlobeComponent() {
           .width(window.innerWidth)
           .height(window.innerHeight);
 
+        console.log('Globe created, mounting to DOM...');
         globe(mountRef.current);
         globeRef.current = globe;
 
         globe.controls().autoRotate = true;
         globe.controls().autoRotateSpeed = 0.3;
+        console.log('Globe successfully mounted and configured');
 
         fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
           .then(res => res.json())
@@ -657,23 +663,39 @@ export default function GlobeComponent() {
         .ringMaxRadius((d: any) => d.maxR)
         .ringPropagationSpeed((d: any) => d.propagationSpeed)
         .ringRepeatPeriod((d: any) => d.repeatPeriod)
-        .ringColor((d: any) => d.color)
-        // Add custom objects for particle trails
-        .customLayerData(pathPoints)
-        .customThreeObject((d: any) => {
-          const obj = new (window as any).THREE.Mesh(
-            new (window as any).THREE.SphereGeometry(d.size, 8, 8),
-            new (window as any).THREE.MeshBasicMaterial({
-              color: d.color,
-              transparent: true,
-              opacity: 0.8
-            })
-          );
-          return obj;
-        })
-        .customThreeObjectUpdate((obj: any, d: any) => {
-          Object.assign(obj.position, globeRef.current.getCoords(d.lat, d.lng, d.alt));
-        });
+        .ringColor((d: any) => d.color);
+        
+      // Only add custom objects if THREE.js is available
+      const THREE = (window as any).THREE;
+      if (THREE && THREE.Mesh && THREE.SphereGeometry && THREE.MeshBasicMaterial) {
+        globeRef.current
+          .customLayerData(pathPoints)
+          .customThreeObject((d: any) => {
+            try {
+              const obj = new THREE.Mesh(
+                new THREE.SphereGeometry(d.size, 8, 8),
+                new THREE.MeshBasicMaterial({
+                  color: d.color,
+                  transparent: true,
+                  opacity: 0.8
+                })
+              );
+              return obj;
+            } catch (error) {
+              console.error('Error creating THREE.js object:', error);
+              // Return a simple empty object instead of null
+              return new THREE.Object3D();
+            }
+          })
+          .customThreeObjectUpdate((obj: any, d: any) => {
+            if (obj && globeRef.current && globeRef.current.getCoords) {
+              Object.assign(obj.position, globeRef.current.getCoords(d.lat, d.lng, d.alt));
+            }
+          });
+      } else {
+        // If THREE.js not ready, clear custom layer data
+        globeRef.current.customLayerData([]);
+      }
     }
   }, [attacks, rings, pathPoints, countryCoordinates]);
 

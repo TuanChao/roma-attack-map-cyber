@@ -344,7 +344,7 @@ export default function RomaAIPanel({ onAttackCommand, attackStats }: RomaAIPane
           </button>
         </div>
 
-        <div className="roma-stats-bar">
+        <div className="roma-stats">
           <div className="roma-stat-item">
             <span className="roma-stat-label">Total</span>
             <span className="roma-stat-value">{attackStats.total}</span>

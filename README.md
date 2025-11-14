@@ -1,367 +1,473 @@
-# 🤖 ROMA Map Attack Cyber Security
+# 🌍 ROMA Cyber Attack Map
 
+## 🚀 Real-time Global Cyber Threat Intelligence Platform
 
-## 📋 Overview
+**ROMA Cyber Attack Map** is an advanced interactive 3D visualization tool for tracking and analyzing cybersecurity threats in real-time across the globe. Built with React, TypeScript, and Three.js, it provides a comprehensive view of global cyber attacks with an AI-powered chatbot assistant.
 
-**ROMA Map Attack Cyber Security** is a **Real-time Global Threat Intelligence & Attack Monitoring Platform** - an advanced interactive 3D visualization tool for tracking and analyzing cyber security threats in real-time across the globe.
-
-### 🎯 Highlights
-
-- 🌍 **60+ countries** with accurate GPS coordinates and country flags
-- ⚔️ **21 attack types** (DDoS, Phishing, Ransomware, XSS, MITM, APT...)
-- 🤖 **ROMA AI Chatbot** with bilingual support (Vietnamese & English) and deep cyber security knowledge
-- 📊 **Real-time dashboard** with CSS icons and glassmorphism design
-- 🎨 **Optimized colors** - reduced glare for comfortable long-term use
-- 🔥 **9 Cyber Hubs** worldwide with special markers
-
-## 🎬 Demo
-
-```
-http://localhost:5174/
-```
-
-> **Note**: System automatically starts with 5 initial attacks and continues generating attacks every 1-3 seconds.
-
----
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-7+-646CFF?logo=vite)
 
 ## ✨ Key Features
 
-### 🌍 **Interactive 3D Globe Visualization**
-- ✅ **60+ countries** with accurate GPS coordinates
-- ✅ **Country flags** displayed on map (flag-icons CDN)
-- ✅ Smooth auto-rotation with optimized speed
-- ✅ Enhanced particles & glow effects (optimized to reduce glare)
-- ✅ **Atmosphere disabled** to reduce lag
-- ✅ **9 Cyber Hub markers** in red for major attack points
-- ✅ Country tooltips with population data
-- ✅ **Responsive** - automatically adjusts to screen size
+### 🌍 Interactive 3D Globe Visualization
+- **60+ countries** with accurate GPS coordinates and flag displays
+- **9 major cyber hubs** highlighted as primary attack sources
+- **Real-time attack visualization** with dynamic 3D arcs
+- **Smooth auto-rotation** with optimized performance
+- **Country tooltips** showing population and geographic data
 
-### 🚀 **Auto-Attack Generation System**
-- ⚡ Continuously generates attacks (every 1-3 seconds)
-- ⚡ **Initial burst**: 5 simultaneous attacks on startup
-- ⚡ **Intelligent routing**: 60% from hubs, 40% from any country
-- ⚡ **Smart cleanup**: Keeps max 100 most recent attacks
-- ⚡ **Auto-complete**: Random 3-10 seconds per attack
-- ⚡ **Success rate**: 60% blocked, 40% complete
-- ⚡ **21 attack types** with intelligent probability
+### ⚔️ Advanced Attack Simulation System
+- **21 different attack types** including DDoS, Ransomware, Zero Day, APT
+- **Intelligent routing**: 60% attacks originate from major cyber hubs
+- **Real-time generation**: New attacks every 1-3 seconds
+- **Dynamic severity levels**: Critical, High, Medium threat classifications
+- **Auto-completion system**: 60% blocked, 40% successful attacks
 
-### 🎯 **Enhanced Arc Visualization**
-- 🔴 **21 attack types** with unique colors & severity
-- 🔴 **Dynamic arc thickness** (0.5 → 1.0 based on severity)
-- 🔴 **Altitude scaling** based on geographic distance
-- 🔴 **Faster animation** for critical attacks (1.2s vs 2s)
-- 🔴 **Gradient tooltips** with glow effects
-- 🔴 **Different dash patterns** per attack type
-- 🔴 **Real-time arcs** from source → target country
+### 🤖 ROMA AI Chatbot Assistant
+- **Bilingual support**: English and Vietnamese commands
+- **Deep cybersecurity knowledge**: Expert explanations of attack types
+- **Interactive commands**: Generate custom attacks, view statistics
+- **Real-time analysis**: Live threat assessment and recommendations
+- **Educational mode**: Learn about cybersecurity concepts interactively
 
-### 🤖 **ROMA AI Chatbot Enhanced**
-- 💬 **21 attack types** with detailed explanations (Vietnamese)
-- 💬 **60+ countries** support commands
-- 💬 **Bilingual**: Vietnamese + English commands
-- 💬 **Real-time statistics** display
-- 💬 **Knowledge base**: XSS, MITM, CSRF, DoS, Social Engineering, Keylogger, Cryptojacking, RaaS, Insider Threat, Supply Chain Attack...
-- 💬 **Enhanced help system** with full guide
-- 💬 **Auto-typing indicator** with animation
-- 💬 **Draggable panel** with minimize/expand
-- 💬 **ROMA logo** (hot pink color) instead of emoji
+### 📊 Real-time Attack Dashboard
+- **Live statistics**: Total/Active/Blocked/Critical attack counters
+- **Recent attack timeline**: Last 5 attacks with detailed information
+- **Dynamic threat level indicator**: Visual threat assessment
+- **Glassmorphism design**: Modern UI with backdrop blur effects
+- **Responsive layout**: Optimized for all screen sizes
 
-### 📊 **Real-time Attack Dashboard**
-- 📈 **Live tracking 4 metrics**: Total/Active/Blocked/Critical
-- 📈 **CSS Icons** instead of emoji (target, lightning, shield, warning, lock)
-- 📈 **Recent 5 attacks** with source → target and country flags
-- 📈 **Dynamic threat level bar** with color gradient
-- 📈 **Color-coded severity indicators**
-- 📈 **Animated stats** with blink & pulse effects
-- 📈 **Minimize/expand** functionality - click header to expand
-- 📈 **Glassmorphism design** with backdrop blur and gradients
-- 📈 **Optimized layout**: Route and Time on same row, Status separate
+## 🎬 Demo
 
-## 🚀 Installation & Setup
+```bash
+# Start development server
+npm run dev
 
-### System Requirements
+# Open browser
+http://localhost:5174/
+```
+
+> The system automatically initializes with 5 attacks and continues generating new threats every 1-3 seconds.
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 - **Node.js**: >= 18.0.0
 - **npm**: >= 9.0.0
-- **RAM**: >= 4GB (recommended 8GB)
-- **Browser**: Chrome/Edge/Firefox (latest version)
+- **Modern Browser**: Chrome, Edge, Firefox (latest versions)
+- **WebGL Support**: Required for 3D visualization
 
 ### Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/your-username/roma-cyber-attack.git
-cd roma-cyber-attack
+# 1. Clone the repository
+git clone https://github.com/TuanChao/roma-attack-map-cyber.git
+cd roma-attack-map-cyber
 
-# Install dependencies
+# 2. Install dependencies
 npm install
 
-# Run development server
+# 3. Start development server
 npm run dev
 
-# Open browser: http://localhost:5174
+# 4. Open your browser and navigate to:
+# http://localhost:5174
 ```
 
 ### Build for Production
 
 ```bash
-# Build
+# Build optimized production bundle
 npm run build
 
-# Preview build
+# Preview production build
 npm run preview
 ```
 
-## 🎮 Main Features
+## 🎮 How to Use
 
-### 1. 🌐 Interactive 3D Globe Visualization
-**Visualize cyber attacks on a 3D globe**
+### 1. Globe Interaction
+- **Mouse drag**: Rotate the globe to view different regions
+- **Scroll wheel**: Zoom in/out for detailed or overview perspective
+- **Hover over flags**: View country information and statistics
+- **Watch attack arcs**: Real-time visualization of cyber attacks
 
-- **Mouse interaction**: Drag to rotate, scroll to zoom in/out
-- **Auto-rotation**: Globe automatically rotates smoothly
-- **Country Flags**: Display flags of 62 countries on the map
-- **Attack Arcs**: 3D dynamic curves from attack source → target
-- **Hub Markers**: 9 red dots marking global cyber hubs
-- **Tooltips**: Hover over countries to see information
-- **Real-time Animation**: Arcs move in real-time
+### 2. Dashboard Monitoring
+- **Statistics panel**: Monitor total, active, blocked, and critical attacks
+- **Recent attacks list**: View the 5 most recent attacks with details
+- **Threat level bar**: Visual indicator of current global threat level
+- **Click header**: Minimize/expand the dashboard panel
 
-### 2. 📊 Attack Dashboard (Bottom Left Corner)
-**Real-time attack monitoring control panel**
+### 3. AI Chatbot Commands
 
-#### Real-time Statistics:
-- **Total Attacks**: Total number of attacks (cumulative)
-- **Active Attacks**: Number of ongoing attacks
-- **Blocked Attacks**: Number of blocked attacks (~60%)
-- **Critical Threats**: Number of critical threats
-
-#### Recent Attack List:
-- Displays **5 most recent** attacks
-- Information: **Type**, **Source** → **Target** (with country flags), **Status**, **Time**
-- Color-coded by severity (Critical/High/Medium)
-- Scroll to see more
-
-#### Threat Level Bar:
-- Dynamic color progress bar
-- Levels: **LOW** (green) → **MEDIUM** (yellow) → **HIGH** (orange) → **CRITICAL** (red)
-- Automatically updates based on number of critical attacks
-
-#### Features:
-- **Minimize/Expand**: Click header to collapse/expand
-- **Auto-scroll**: Automatically scrolls when new attack appears
-- **Animations**: Slide-in, pulse, blink effects
-
-### 3. 🤖 ROMA AI Chatbot (Bottom Right Corner)
-**AI assistant specialized in Cyber Security**
-
-#### Knowledge:
-- **21 attack types** with detailed explanations (Vietnamese)
-- **60+ countries** in database
-- **Cyber security concepts**: APT, Zero Day, Ransomware, XSS, MITM...
-- **Real-time statistics**: Current system stats
-
-#### Functions:
-- **Bilingual**: Supports Vietnamese and English
-- **Manual attack creation**: "attack DDoS from China"
-- **Random attack**: "random attack"
-- **Mass attack**: "mass attack" (8 attacks simultaneously)
-- **Control**: "stop all", "statistics"
-- **Learning**: Ask about any attack type
-- **Help system**: Type "help" to see full guide
-
-#### Interface:
-- **Draggable**: Drag panel anywhere
-- **Minimize/Expand**: Collapse when not in use
-- **Typing indicator**: Animation when AI is responding
-- **Auto-scroll**: Automatically scrolls to new messages
-- **ROMA Logo**: Hot pink icon instead of emoji
-
-### 4. ⚔️ Auto Attack Generation System
-**Intelligent automatic attack generation system**
-
-#### Operation Mechanism:
-- **Initial Burst**: 5 attacks immediately on startup
-- **Continuous Generation**: Creates new every 1-3 seconds (random)
-- **Smart Routing**:
-  - 60% from **Cyber Hubs** (China, Russia, US, NK, Iran...)
-  - 40% from any country
-- **Random Target**: Target chosen randomly (different from source)
-- **Attack Types**: Intelligently distributed among 21 types
-- **Severity Mix**: Critical (30%), High (40%), Medium (30%)
-
-#### Attack Lifecycle:
-1. **Created**: Attack is created and appears on globe
-2. **Active** (3-10s): Arc animation moves
-3. **Completed**:
-   - 60% chance → **Blocked** ✅
-   - 40% chance → **Complete** ⚠️
-4. **Cleanup**: Keeps max 100 attacks, removes oldest
-
-### 5. 🎨 Visual Effects & Animations
-**Premium graphics effects**
-
-#### Background:
-- **Dark Space Theme**: Dark gradient (#0f1016 → #000000)
-- **Animated Stars**: Twinkling particles with twinkle animation
-- **Subtle Glow**: Cyan and red radial gradients (low opacity)
-
-#### Globe Effects:
-- **Material Texture**: Dark blue ocean, light continents
-- **Country Flags**: 24px with pulse animation
-- **Hub Markers**: Red glow with scale animation
-- **Attack Arcs**:
-  - Dynamic thickness (0.5 - 1.0)
-  - Variable speed (1.2s - 2s)
-  - Dash animation
-  - Color-coded by severity
-
-#### Dashboard Effects:
-- **Glassmorphism**: Backdrop blur + semi-transparent
-- **CSS Icons**: Drawn with pseudo-elements (::before, ::after)
-- **Gradient Borders**: Animated glow
-- **Slide Animations**: Attacks slide in from right
-- **Pulse Effects**: Stats blink, threat bar glows
-
-#### Typography:
-- **Saira Font**: Modern, professional (300-800 weight)
-- **Gradient Text**: Multi-color gradient on title
-- **Text Glow**: Subtle drop-shadow animation
-
-### 6. 🔄 Real-time Updates
-**Continuous updates, no reload**
-
-- **Stats Counter**: Updates instantly when new attack appears
-- **Dashboard List**: Auto-update with newest attacks on top
-- **Threat Level**: Dynamically calculated based on % critical attacks
-- **Globe Arcs**: Render and cleanup in realtime
-- **Chatbot Response**: Updates stats when user asks
-
-### 7. 📱 Responsive Design
-**Optimized for all screen sizes**
-
-- **Desktop**: Full experience with 3 panels
-- **Tablet**: Adjusted layout, smaller text
-- **Mobile**: Stack panels vertically
-- **Touch Support**: Drag & pinch zoom on globe
-
-### 8. ⚡ Performance Features
-**Performance optimization**
-
-- **Memory Management**: Max 100 attacks, auto-cleanup
-- **Atmosphere Disabled**: Reduces rendering lag
-- **Optimized Opacity**: Glow effects at low level (0.03-0.04)
-- **CSS Animations**: Hardware-accelerated
-- **Efficient State**: React hooks with optimized dependencies
-- **CDN Resources**: Flag-icons and fonts from CDN
-
-## 💬 Detailed Usage Guide
-
-### 1️⃣ Start the system
+#### Attack Generation
 ```bash
+# Generate specific attacks
+attack DDoS from China
+attack Ransomware from Russia
+attack Phishing from North Korea
+
+# Random attacks
+random attack
+mass attack
+random 5
+```
+
+#### Learning & Analysis
+```bash
+# Learn about attack types
+What is DDoS?
+Explain Ransomware
+How does XSS work?
+What is Zero Day?
+
+# Get statistics
+statistics
+analyze threat
+help
+```
+
+#### System Control
+```bash
+# Control attack generation
+stop all
+continue
+clear screen
+```
+
+### 4. Attack Types & Severity
+
+| Severity | Types | Color Code |
+|----------|-------|------------|
+| **Critical** | Ransomware, Zero Day, APT, Data Breach | 🔴 Red |
+| **High** | DDoS, Malware, Botnet, SQL Injection | 🟠 Orange |
+| **Medium** | Phishing, Brute Force, Social Engineering | 🟡 Yellow |
+
+## 🌍 Supported Countries & Cyber Hubs
+
+### Major Cyber Hubs (Red Markers)
+- 🇨🇳 **China** (Beijing)
+- 🇷🇺 **Russia** (Moscow)
+- 🇺🇸 **United States** (Washington DC)
+- 🇰🇵 **North Korea** (Pyongyang)
+- 🇮🇷 **Iran** (Tehran)
+- 🇯🇵 **Japan** (Tokyo)
+- 🇮🇱 **Israel** (Jerusalem)
+- 🇬🇧 **United Kingdom** (London)
+- 🇩🇪 **Germany** (Berlin)
+
+### Regional Coverage
+- **Asia-Pacific**: 15 countries including South Korea, Vietnam, India, Australia
+- **Europe**: 18 countries including France, Netherlands, Spain, Italy
+- **Americas**: 9 countries including Brazil, Canada, Mexico
+- **Africa & Middle East**: 11 countries including Saudi Arabia, UAE, South Africa
+
+**Total: 60+ countries with accurate GPS coordinates**
+
+## 🛠️ Tech Stack
+
+### Core Technologies
+- **React 18+**: Modern React with hooks and functional components
+- **TypeScript 5.8+**: Type-safe development with strict mode
+- **Vite 7+**: Fast build tool with hot module replacement
+- **Globe.gl**: 3D globe visualization library
+- **Three.js**: WebGL-based 3D graphics rendering
+
+### Additional Libraries
+- **Flag Icons**: Country flag visualization
+- **Google Fonts**: Saira font family for modern typography
+- **CSS3**: Advanced styling with glassmorphism and animations
+
+### Development Tools
+- **ESLint**: Code linting with TypeScript support
+- **Prettier**: Code formatting (optional)
+- **VS Code**: Recommended development environment
+## 📁 Project Structure
+
+```
+roma-attack-map-cyber/
+├── public/
+│   ├── roma-icon.svg          # Application favicon
+│   └── vite.svg               # Vite logo
+├── src/
+│   ├── components/
+│   │   ├── AttackDashboard.tsx      # Real-time attack dashboard
+│   │   ├── AttackDashboard.css      # Dashboard styling
+│   │   ├── GlobeComponent.tsx       # 3D globe visualization
+│   │   ├── GlobeComponent.css       # Globe component styles
+│   │   ├── RomaAIPanel.tsx          # AI chatbot interface
+│   │   ├── RomaAIPanel.css          # Chatbot panel styling
+│   │   └── attackExplanations.ts    # Attack type definitions
+│   ├── App.tsx                # Main application component
+│   ├── App.css               # Global application styles
+│   ├── main.tsx              # Application entry point
+│   └── index.css             # Base CSS styles
+├── index.html                # HTML template
+├── package.json              # Project dependencies
+├── tsconfig.json             # TypeScript configuration
+├── vite.config.ts            # Vite build configuration
+└── README.md                 # Project documentation
+```
+
+## 🎨 Visual Design
+
+### Color Scheme
+- **Primary**: Cyan (#00ffff) for highlights and accents
+- **Danger**: Red (#ff4757) for critical threats
+- **Warning**: Orange (#ffa502) for high-severity attacks
+- **Success**: Green (#2ed573) for blocked attacks
+- **Background**: Dark space theme with gradient
+
+### Typography
+- **Font Family**: Saira (Google Fonts)
+- **Weights**: 300-800 for various text elements
+- **Effects**: Gradient text, glow animations, smooth transitions
+
+### Animations
+- **Attack Arcs**: Dynamic movement with variable speed
+- **Globe Rotation**: Smooth auto-rotation
+- **UI Elements**: Slide-in, fade, pulse effects
+- **Statistics**: Real-time counter animations
+
+## ⚡ Performance Optimizations
+
+### Memory Management
+- Maximum 100 concurrent attacks with auto-cleanup
+- Efficient React state management with hooks
+- Optimized re-rendering with memoization
+
+### Rendering Optimizations
+- Atmosphere effects disabled for better performance
+- Dynamic arc rendering with cleanup
+- Canvas auto-resize with throttling
+- Hardware-accelerated CSS animations
+
+### Network Optimizations
+- CDN resources for external assets
+- Code splitting with Vite
+- Tree shaking for smaller bundle size
+- Lazy loading for components
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env` file for custom configuration:
+
+```env
+VITE_PORT=5174
+VITE_ATTACK_INTERVAL=2000
+VITE_MAX_ATTACKS=100
+```
+
+### Customization Options
+
+#### Modify Attack Frequency
+```typescript
+// src/components/GlobeComponent.tsx
+const attackInterval = 2000; // milliseconds between attacks
+```
+
+#### Add New Attack Types
+```typescript
+// src/components/attackExplanations.ts
+export const attackTypes = {
+  "NEW_ATTACK": {
+    severity: "high",
+    color: "#ff0000",
+    explanation: "Description of new attack type"
+  }
+};
+```
+
+#### Update Country List
+```typescript
+// src/components/GlobeComponent.tsx
+const countryCoordinates = {
+  "New Country": {
+    lat: 0.0,
+    lng: 0.0,
+    population: 1000000,
+    code: "xx",
+    flag: "🏴",
+    isHub: false
+  }
+};
+```
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### Port Already in Use
+```bash
+# Solution 1: Kill process using port 5174
+netstat -ano | findstr :5174
+taskkill /PID <ProcessID> /F
+
+# Solution 2: Use different port
+npm run dev -- --port 3000
+```
+
+#### Globe Not Displaying
+- Verify WebGL support: Visit `chrome://gpu`
+- Check browser console for JavaScript errors
+- Clear browser cache and hard reload (Ctrl+Shift+R)
+- Ensure modern browser version
+
+#### Performance Issues
+- Close unnecessary browser tabs
+- Reduce attack frequency in configuration
+- Disable browser extensions that may interfere
+- Check system RAM usage
+
+#### Build Errors
+```bash
+# Clear node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+
+# Clear Vite cache
+rm -rf .vite
 npm run dev
-# Open browser: http://localhost:5174
-```
-- **5 attacks** appear immediately
-- Dashboard displays at **bottom left corner**
-- ROMA AI button at **bottom right corner**
-- Globe automatically rotates
-
-### 2️⃣ Interact with Globe
-- **Drag mouse**: Rotate globe
-- **Scroll**: Zoom in/out
-- **Hover flag**: View country name
-- **Hover arc**: View attack details (type, source → target)
-
-### 3️⃣ Use Dashboard
-- **Click header**: Minimize/expand dashboard
-- **View stats**: Real-time counter at top
-- **Scroll list**: View previous attacks
-- **Observe arcs**: Track corresponding arcs on globe
-
-### 4️⃣ Chat with ROMA AI
-Click 🤖 button at bottom right corner, then:
-
-#### Supported Commands:
-
-#### A. Manual Attack Creation:
-```bash
-✅ attack DDoS from China
-✅ attack Phishing from Russia
-✅ attack SQL Injection from Iran
-✅ attack Zero Day from Israel
-✅ attack Ransomware from North Korea
-✅ attack Botnet from United States
-✅ attack XSS from Vietnam
-✅ attack MITM from South Korea
 ```
 
-#### B. Random & Mass Attacks:
-```bash
-🎲 random attack                # Random attack from random country
-⚡ mass attack                  # 8 attacks simultaneously
-🎯 random 5                     # 5 random attacks
+## 🧪 Testing
+
+### Manual Testing Checklist
+- [ ] Globe renders correctly on page load
+- [ ] Attacks generate automatically every 1-3 seconds
+- [ ] Dashboard updates in real-time
+- [ ] AI chatbot responds to commands
+- [ ] Responsive design works on mobile
+- [ ] All 60+ countries display correctly
+- [ ] Performance remains smooth with 100+ attacks
+
+### Browser Compatibility
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Edge 90+
+- ✅ Safari 14+
+- ❌ Internet Explorer (not supported)
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+### Development Workflow
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/yourusername/roma-attack-map-cyber.git`
+3. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+4. **Make** your changes with proper TypeScript types
+5. **Test** thoroughly across different browsers
+6. **Commit** with descriptive messages: `git commit -m 'Add amazing feature'`
+7. **Push** to your branch: `git push origin feature/amazing-feature`
+8. **Create** a Pull Request with detailed description
+
+### Code Style Guidelines
+- Use TypeScript strict mode
+- Follow React functional component patterns
+- Implement responsive design principles
+- Add proper error handling
+- Include JSDoc comments for complex functions
+- Maintain consistent naming conventions
+
+### Issue Reporting
+When reporting issues, please include:
+- Browser version and operating system
+- Steps to reproduce the problem
+- Expected vs actual behavior
+- Console error messages (if any)
+- Screenshots or screen recordings
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2024 ROMA Cyber Security
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 ```
 
-#### C. Learning & Discovery:
-```bash
-❓ What is DDoS?
-❓ Explain Ransomware
-❓ How does XSS attack work?
-❓ What is APT?
-❓ How dangerous is Phishing?
-```
+## ⚠️ Security & Disclaimer
 
-#### D. Control & Analytics:
-```bash
-⏸️ stop all                     # Stop auto-generation
-▶️ continue                     # Resume auto-generation
-📊 statistics                   # Display current stats
-🔍 analyze threat              # Threat analysis
-❓ help                         # View full guide
-```
+### Educational Purpose Only
+This application is designed for **educational and research purposes** in cybersecurity:
 
-#### E. Country Queries:
-```bash
-🌍 How many countries?
-🌍 List cyber hubs
-🌍 Which country is most dangerous?
-```
+- ✅ **Cybersecurity education and training**
+- ✅ **Research and academic studies**
+- ✅ **Security awareness demonstrations**
+- ✅ **Threat intelligence visualization**
 
-### 5️⃣ Monitor Threat Level
-- Observe **Threat Level Bar** at bottom of dashboard
-- **LOW** (< 20% critical): Green color
-- **MEDIUM** (20-40%): Yellow color
-- **HIGH** (40-60%): Orange color
-- **CRITICAL** (> 60%): Red color, warning blink
+### Important Warnings
+- ❌ **DO NOT** use for illegal activities or actual attacks
+- ❌ **DO NOT** target real systems or infrastructure
+- ❌ **DO NOT** use for unauthorized penetration testing
+- ❌ **NO REAL DATA** is collected or transmitted
 
-### 6️⃣ Advanced Features
+### Data Privacy
+- **No personal information** is collected
+- **No external APIs** are used (except public CDNs)
+- **All attack data is simulated** and not real
+- **No tracking or analytics** are implemented
 
-#### Custom Attack Duration:
-Default: 3-10 seconds. Can adjust in code:
-```typescript
-// GlobeComponent.tsx
-const randomDuration = Math.random() * 7000 + 3000; // 3-10s
-```
+## 🌟 Acknowledgments
 
-#### Custom Generation Interval:
-Default: 1-3 seconds. Adjust in:
-```typescript
-// GlobeComponent.tsx
-const randomInterval = Math.random() * 2000 + 1000; // 1-3s
-```
+### Technologies & Libraries
+- [React](https://react.dev/) - The library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript at scale
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [Globe.gl](https://github.com/vasturiano/globe.gl) - 3D globe data visualization
+- [Three.js](https://threejs.org/) - JavaScript 3D library
+- [Flag Icons](https://github.com/lipis/flag-icons) - Country flag icons collection
 
-#### Add New Country:
-```typescript
-// GlobeComponent.tsx - countryCoordinates
-"New Country": {
-  lat: 0.0,
-  lng: 0.0,
-  population: 1000000,
-  code: "nc",  // Flag code
-  flag: "🏴",
-  isHub: false
-}
-```
+### Inspiration
+- Real-world threat intelligence platforms
+- Cybersecurity visualization research
+- Global attack monitoring systems
+- Educational cybersecurity tools
 
-## 🎯 21 Attack Types
+## 📞 Support & Contact
+
+### Getting Help
+- **GitHub Issues**: [Create an issue](https://github.com/TuanChao/roma-attack-map-cyber/issues)
+- **Documentation**: Check this README and inline code comments
+- **Community**: Join discussions in GitHub Discussions
+
+### Roadmap & Future Features
+- [ ] Historical attack data analysis
+- [ ] Custom attack scenario builder
+- [ ] Integration with real threat feeds (educational use)
+- [ ] Mobile app development
+- [ ] Multi-language support expansion
+- [ ] Advanced AI threat prediction
+
+---
+
+<div align="center">
+
+## 🌟 Star this repository if you found it helpful!
+
+**Built with ❤️ for cybersecurity education**
+
+[![GitHub stars](https://img.shields.io/github/stars/TuanChao/roma-attack-map-cyber?style=social)](https://github.com/TuanChao/roma-attack-map-cyber/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/TuanChao/roma-attack-map-cyber?style=social)](https://github.com/TuanChao/roma-attack-map-cyber/network/members)
+
+### Made with 💜 by the ROMA Team
+
+</div>
 
 <details>
 <summary><b>View Full List</b></summary>
